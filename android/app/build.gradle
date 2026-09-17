@@ -1,0 +1,15 @@
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) { localPropertiesFile.withReader('UTF-8') { localProperties.load(it) } }
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (!flutterRoot) { throw new Exception("Flutter SDK not found") }
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+android {
+    namespace "com.example.motoride"
+    compileSdk 34
+    defaultConfig { applicationId "com.example.motoride" minSdk 21 targetSdk 34 versionCode 1 versionName "1.0" }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_1_8 targetCompatibility JavaVersion.VERSION_1_8 }
+    kotlinOptions { jvmTarget = '1.8' }
+}
+dependencies { implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version" }
