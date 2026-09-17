@@ -1,0 +1,16 @@
+name: motoride
+description: MotoRide app
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_maps_flutter: ^2.5.0
+  supabase_flutter: ^2.0.0
+  geolocator: ^10.0.0
+
+flutter:
+  uses-material-design: true
