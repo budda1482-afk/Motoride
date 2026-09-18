@@ -10,7 +10,7 @@ Future<void> initializeAppAfterLaunch() async {
   try {
     print('App initialization running in background...');
   } catch (e) {
-    print('Init error: $e');
+    print('Init error: ${e}');
   }
 }
 
@@ -19,7 +19,7 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
