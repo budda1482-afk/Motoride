@@ -10,7 +10,7 @@ Future<void> initializeAppAfterLaunch() async {
   try {
     print('App initialization running in background...');
   } catch (e) {
-    print('Init error: ${e}');
+    print('Init error: $e');
   }
 }
 
