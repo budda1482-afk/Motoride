@@ -1,27 +1,19 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  // Ensure Flutter bindings are initialized
   WidgetsFlutterBinding.ensureInitialized();
-  
-  // 🚀 START THE APP FIRST — NO WAITING!
   runApp(const MyApp());
-  
-  // 🔄 Run background init AFTER app starts
   initializeAppAfterLaunch();
 }
 
-// ✅ Background initialization — defined BEFORE use
 Future<void> initializeAppAfterLaunch() async {
   try {
     print('App initialization running in background...');
-    // Add your init logic here later
   } catch (e) {
-    print('Init error (non-blocking): $e');
+    print('Init error: $e');
   }
 }
 
-// ✅ Simple SplashScreen — NO extra file needed!
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
@@ -42,7 +34,6 @@ class SplashScreen extends StatelessWidget {
   }
 }
 
-// ✅ Main App — unchanged
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
